@@ -1,0 +1,20 @@
+body {
+  background-image: url('../images/pine.jpg');
+  background-position: center;
+  background-attachment: fixed;
+  background-color: #587d4a;
+}
+header {
+  text-align: center;
+  font-size: 2em;
+  font-family: sans-serif;
+  color: black;
+  padding: 1em;
+}
+main {
+  background-color: #DACFC2;
+  opacity: 0.8;
+  margin: 3em;
+  padding: 3em;
+  text-align: center;
+}
