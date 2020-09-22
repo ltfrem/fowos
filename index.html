@@ -10,12 +10,26 @@
     <header>Standard Firefighting Orders & Watchout Situations Review</header>
     <main>
       <div id="divMain">
+          <input type="button" id="wo_def" value="Give me a Watchout, I'll tell you the number"></input>
+          <br><p id="wo_def_ques" class="question"></p>
+          <input type="text" id="wo_def_input" class="pop_input" size="4"></input><br>
+
+          <input type="button" id="wo_num" value="Give me a number, I'll tell you the Watchout"></input>
+          <br><p id="wo_num_ques" class="question"></p>
+          <textarea cols="28" rows="3" id="wo_num_input" class="pop_input"></textarea><br>
+
+          <input type="button" id="fo_def" value="Give me a Fire Order, I'll tell you the number"></input>
+          <br><p id="fo_def_ques" class="question"></p>
+          <input type="text" id="fo_def_input" class="pop_input" size="4"></input><br>
+
+          <input type="button" id="fo_num" value="Give me a number, I'll tell you the Fire Order"></input>
+          <br><p id="fo_num_ques" class="question"></p>
+          <textarea cols="28" rows="3" id="fo_num_input" class="pop_input"></textarea><br>
+
+          <br><br><br><label for="comment">Comments:</label><br>
+          <textarea id="comment" cols="28" rows="8"></textarea><br>
+          <input type="submit" value="Submit">
         <form>
-          <input type="button" id="wo_def" value="Give me a Watchout, I'll tell you the number"></input><br><br>
-          <input type="button" id="wo_num" value="Give me a number, I'll tell you the Watchout"></input><br><br>
-          <input type="button" id="fo_def" value="Give me a Fire Order, I'll tell you the number"></input><br><br>
-          <input type="button" id="fo_num" value="Give me a number, I'll tell you the Fire Order"></input><br>
-        </form>
       </div>
     </main>
   </body>
