@@ -15,10 +15,14 @@ header {
 }
 main {
   background-color: #DACFC2;
+  font-size: 1.3em;
   opacity: 0.8;
   margin: 3em;
   padding: 3em;
   text-align: center;
+}
+.button {
+  font-size: 1em;
 }
 .pop_input {
   display: none;
@@ -35,9 +39,21 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
+.again {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.8em;
+}
 /*
 .answer {
   display: none;
   margin-left: auto;
   margin-right: auto;
 } */
+
+/* media query for tablet viewport
+@media screen and (min-width: 481px) {
+
+}
+*/
