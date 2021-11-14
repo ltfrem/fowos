@@ -13,6 +13,9 @@ header {
   color: black;
   padding: 1em;
 }
+h1 {
+  font-size: 1.7em;
+}
 main {
   background-color: #DACFC2;
   font-size: 1.3em;
@@ -35,6 +38,11 @@ main {
   margin-right: auto;
 }
 .question {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mc {
   display: none;
   margin-left: auto;
   margin-right: auto;

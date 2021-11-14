@@ -57,6 +57,12 @@ let fo9_answer = new RegExp(/\s*?[Mm][Aa][Ii][Nn][Tt][Aa][Ii][Nn]\s*?[Cc][Oo][Nn
 const fo10 = "Fight fire aggressively, having provided for safety first.";
 let fo10_answer = new RegExp(/\s*?[Ff][Ii][Gg][Hh][Tt]\s*?[Ff][Ii][Rr][Ee]\s*?[Aa][Gg][Gg][Rr][Ee][Ss][Ss][Ii][Vv][Ee][Ll][Yy][,]?\s*?[Hh][Aa][Vv][Ii][Nn][Gg]\s*?[Pp][Rr][Oo][Vv][Ii][Dd][Ee][Dd]\s*?[Ff][Oo][Rr]\s*?[Ss][Aa][Ff][Ee][Tt][Yy]\s*?[Ff][Ii][Rr][Ss][Tt][.]?\s*?/);
 
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("wo_def").addEventListener("click", wo_def);
+  document.getElementById("wo_num").addEventListener("click", wo_num);
+  document.getElementById("fo_def").addEventListener("click", fo_def);
+  document.getElementById("fo_num").addEventListener("click", fo_num);
+});
 //user selects give me a watchout, i'll tell you number
 function wo_def() {
   document.getElementById("wo_def_input").style.display = "block";
@@ -67,82 +73,77 @@ function wo_def() {
   document.getElementById("wo_num_ques").style.display = "none";
   document.getElementById("fo_def_ques").style.display = "none";
   document.getElementById("fo_num_ques").style.display = "none";
-  document.getElementById("wo_mc").style.display = "none";
-  document.getElementById("wo_mc_num").style.display = "none";
-  document.getElementByd("fo_mc").style.display = "none";
-  document.getElementById("fo_mc_num").style.display = "none";
   document.getElementById("wo_def_input").value = "";
   document.getElementById("wo_def_input").style.backgroundColor = "#FFFFFF";
   document.getElementById("another_1").style.display = "none";
-  let random = Math.floor(Math.random() * 18) + 1; //returns a random number from 1 to 18
-  //https://stackoverflow.com/questions/18806210/generating-non-repeating-random-numbers-in-js
-  let answer = "";
-  if (random == 1) {
-    document.getElementById("wo_def_ques").innerHTML = wo1;
-    answer = 1;
-  } else if (random == 2) {
-    document.getElementById("wo_def_ques").innerHTML = wo2;
-    answer = 2;
-  } else if (random == 3) {
-    document.getElementById("wo_def_ques").innerHTML = wo3;
-    answer = 3;
-  } else if (random == 4) {
-    document.getElementById("wo_def_ques").innerHTML = wo4;
-    answer = 4;
-  } else if (random == 5) {
-    document.getElementById("wo_def_ques").innerHTML = wo5;
-    answer = 5;
-  } else if (random == 6) {
-    document.getElementById("wo_def_ques").innerHTML = wo6;
-    answer = 6;
-  } else if (random == 7) {
-    document.getElementById("wo_def_ques").innerHTML = wo7;
-    answer = 7;
-  } else if (random == 8) {
-    document.getElementById("wo_def_ques").innerHTML = wo8;
-    answer = 8;
-  } else if (random == 9) {
-    document.getElementById("wo_def_ques").innerHTML = wo9;
-    answer = 9;
-  } else if (random == 10) {
-    document.getElementById("wo_def_ques").innerHTML = wo10;
-    answer = 10;
-  } else if (random == 11) {
-    document.getElementById("wo_def_ques").innerHTML = wo11;
-    answer = 11;
-  } else if (random == 12) {
-    document.getElementById("wo_def_ques").innerHTML = wo12;
-    answer = 12;
-  } else if (random == 13) {
-    document.getElementById("wo_def_ques").innerHTML = wo13;
-    answer = 13;
-  } else if (random == 14) {
-    document.getElementById("wo_def_ques").innerHTML = wo14;
-    answer = 14;
-  } else if (random == 15) {
-    document.getElementById("wo_def_ques").innerHTML = wo15;
-    answer = 15;
-  } else if (random == 16) {
-    document.getElementById("wo_def_ques").innerHTML = wo16;
-    answer = 16;
-  } else if (random == 17) {
-    document.getElementById("wo_def_ques").innerHTML = wo17;
-    answer = 17;
-  } else if (random == 18) {
-    document.getElementById("wo_def_ques").innerHTML = wo18;
-    answer = 18;
-  }
-  let bg = document.getElementById("wo_def_input");
-  bg.oninput = function test_wo_def() {
-    let usr_input = document.getElementById("wo_def_input").value;
-    if (usr_input == answer) {
-      bg.style.backgroundColor = "#9ABC6B";
-      document.getElementById("another_1").style.display = "block";
-      document.getElementById("another_1").addEventListener("click", wo_def);
-    } else {
-      bg.style.backgroundColor = "#D6858E";
-    } //end of else
-  }; //end of test_wo_def function
+    let random = Math.floor(Math.random() * 18) + 1; //returns a random number from 1 to 10
+    let answer = "";
+    if (random == 1) {
+      document.getElementById("wo_def_ques").innerHTML = wo1;
+      answer = 1;
+    } else if (random == 2) {
+      document.getElementById("wo_def_ques").innerHTML = wo2;
+      answer = 2;
+    } else if (random == 3) {
+      document.getElementById("wo_def_ques").innerHTML = wo3;
+      answer = 3;
+    } else if (random == 4) {
+      document.getElementById("wo_def_ques").innerHTML = wo4;
+      answer = 4;
+    } else if (random == 5) {
+      document.getElementById("wo_def_ques").innerHTML = wo5;
+      answer = 5;
+    } else if (random == 6) {
+      document.getElementById("wo_def_ques").innerHTML = wo6;
+      answer = 6;
+    } else if (random == 7) {
+      document.getElementById("wo_def_ques").innerHTML = wo7;
+      answer = 7;
+    } else if (random == 8) {
+      document.getElementById("wo_def_ques").innerHTML = wo8;
+      answer = 8;
+    } else if (random == 9) {
+      document.getElementById("wo_def_ques").innerHTML = wo9;
+      answer = 9;
+    } else if (random == 10) {
+      document.getElementById("wo_def_ques").innerHTML = wo10;
+      answer = 10;
+    } else if (random == 11) {
+      document.getElementById("wo_def_ques").innerHTML = wo11;
+      answer = 11;
+    } else if (random == 12) {
+      document.getElementById("wo_def_ques").innerHTML = wo12;
+      answer = 12;
+    } else if (random == 13) {
+      document.getElementById("wo_def_ques").innerHTML = wo13;
+      answer = 13;
+    } else if (random == 14) {
+      document.getElementById("wo_def_ques").innerHTML = wo14;
+      answer = 14;
+    } else if (random == 15) {
+      document.getElementById("wo_def_ques").innerHTML = wo15;
+      answer = 15;
+    } else if (random == 16) {
+      document.getElementById("wo_def_ques").innerHTML = wo16;
+      answer = 16;
+    } else if (random == 17) {
+      document.getElementById("wo_def_ques").innerHTML = wo17;
+      answer = 17;
+    } else if (random == 18) {
+      document.getElementById("wo_def_ques").innerHTML = wo18;
+      answer = 18;
+    }
+    let bg = document.getElementById("wo_def_input");
+    bg.oninput = function test_wo_def() {
+        let usr_input = document.getElementById("wo_def_input").value;
+        if (usr_input == answer) {
+            bg.style.backgroundColor = "#9ABC6B";
+            document.getElementById("another_1").style.display = "block";
+            document.getElementById("another_1").addEventListener("click", wo_def);
+        } else {
+            bg.style.backgroundColor = "#D6858E";
+        } //end of else
+        }; //end of test_wo_def function
 }; //end of wo_def function
 
 //user selects give me a watchout number
@@ -155,10 +156,6 @@ function wo_num() {
   document.getElementById("wo_num_ques").style.display = "block";
   document.getElementById("fo_def_ques").style.display = "none";
   document.getElementById("fo_num_ques").style.display = "none";
-  document.getElementById("wo_mc").style.display = "none";
-  document.getElementById("wo_mc_num").style.display = "none";
-  document.getElementByd("fo_mc").style.display = "none";
-  document.getElementById("fo_mc_num").style.display = "none";
   document.getElementById("wo_num_input").value = "";
   document.getElementById("wo_num_input").style.backgroundColor = "#FFFFFF";
   document.getElementById("another_2").style.display = "none";
@@ -205,46 +202,18 @@ function wo_num() {
   }
   let bg = document.getElementById("wo_num_input");
   bg.oninput = function test_wo_num() {
-    let usr_input = document.getElementById("wo_num_input").value;
-    if (regex.test(usr_input)) {
-      bg.style.backgroundColor = "#9ABC6B";
-      document.getElementById("another_2").style.display = "block";
-      document.getElementById("another_2").addEventListener("click", wo_num);
-    } else {
-      bg.style.backgroundColor = "#D6858E";
-    } //end of else
-  }; //end of test_wo_num function
-}; //end of wo_num function
-/*
-function wo_mc() { //watchout situations multiple choice
-  document.getElementById("wo_def_input").style.display = "none";
-  document.getElementById("wo_num_input").style.display = "none";
-  document.getElementById("fo_def_input").style.display = "none";
-  document.getElementById("fo_num_input").style.display = "none";
-  document.getElementById("wo_def_ques").style.display = "none";
-  document.getElementById("wo_num_ques").style.display = "none";
-  document.getElementById("fo_def_ques").style.display = "none";
-  document.getElementById("fo_num_ques").style.display = "none";
-  document.getElementById("wo_mc").style.display = "block";
-  document.getElementById("wo_mc_num").style.display = "none";
-  document.getElementByd("fo_mc").style.display = "none";
-  document.getElementById("fo_mc_num").style.display = "none";
-};
-function wo_mc_num() { //watchout situations multiple choice by number
-  document.getElementById("wo_def_input").style.display = "none";
-  document.getElementById("wo_num_input").style.display = "none";
-  document.getElementById("fo_def_input").style.display = "none";
-  document.getElementById("fo_num_input").style.display = "none";
-  document.getElementById("wo_def_ques").style.display = "none";
-  document.getElementById("wo_num_ques").style.display = "none";
-  document.getElementById("fo_def_ques").style.display = "none";
-  document.getElementById("fo_num_ques").style.display = "none";
-  document.getElementById("wo_mc").style.display = "none";
-  document.getElementById("wo_mc_num").style.display = "block";
-  document.getElementByd("fo_mc").style.display = "none";
-  document.getElementById("fo_mc_num").style.display = "none";
-};
-*/
+        let usr_input = document.getElementById("wo_num_input").value;
+        if (regex.test(usr_input)) {
+            bg.style.backgroundColor = "#9ABC6B";
+            document.getElementById("another_2").style.display = "block";
+            document.getElementById("another_2").addEventListener("click", wo_num);
+          } else {
+            bg.style.backgroundColor = "#D6858E";
+          } //end of else
+      }; //end of test_wo_num function
+    }; //end of wo_num function
+
+
 //user selects give me a fire order, i'll tell you number
 function fo_def() {
   document.getElementById("wo_def_input").style.display = "none";
@@ -255,58 +224,56 @@ function fo_def() {
   document.getElementById("wo_num_ques").style.display = "none";
   document.getElementById("fo_def_ques").style.display = "block";
   document.getElementById("fo_num_ques").style.display = "none";
-  document.getElementById("wo_mc").style.display = "none";
-  document.getElementById("wo_mc_num").style.display = "none";
-  document.getElementByd("fo_mc").style.display = "none";
-  document.getElementById("fo_mc_num").style.display = "none";
   document.getElementById("fo_def_input").value = "";
   document.getElementById("fo_def_input").style.backgroundColor = "#FFFFFF";
   document.getElementById("another_3").style.display = "none";
-  let random = Math.floor(Math.random() * 10) + 1;
-  let answer = "";
-  if (random == 1) {
-    document.getElementById("fo_def_ques").innerHTML = fo1;
-    answer = 1;
-  } else if (random == 2) {
-    document.getElementById("fo_def_ques").innerHTML = fo2;
-    answer = 2;
-  } else if (random == 3) {
-    document.getElementById("fo_def_ques").innerHTML = fo3;
-    answer = 3;
-  } else if (random == 4) {
-    document.getElementById("fo_def_ques").innerHTML = fo4;
-    answer = 4;
-  } else if (random == 5) {
-    document.getElementById("fo_def_ques").innerHTML = fo5;
-    answer = 5;
-  } else if (random == 6) {
-    document.getElementById("fo_def_ques").innerHTML = fo6;
-    answer = 6;
-  } else if (random == 7) {
-    document.getElementById("fo_def_ques").innerHTML = fo7;
-    answer = 7;
-  } else if (random == 8) {
-    document.getElementById("fo_def_ques").innerHTML = fo8;
-    answer = 8;
-  } else if (random == 9) {
-    document.getElementById("fo_def_ques").innerHTML = fo9;
-    answer = 9;
-  } else if (random == 10) {
-    document.getElementById("fo_def_ques").innerHTML = fo10;
-    answer = 10;
-  }
-  let bg = document.getElementById("fo_def_input");
-  bg.oninput = function test_fo_def() {
-    let usr_input = document.getElementById("fo_def_input").value;
-    if (usr_input == answer) {
-      bg.style.backgroundColor = "#9ABC6B";
-      document.getElementById("another_3").style.display = "block";
-      document.getElementById("another_3").addEventListener("click", fo_def);
-    } else {
-      bg.style.backgroundColor = "#D6858E";
-    } //end of else
-  }; //end of test_fo_def function
-}; //end of fo_def function
+    let random = Math.floor(Math.random() * 10) + 1;
+    let answer = "";
+    if (random == 1) {
+      document.getElementById("fo_def_ques").innerHTML = fo1;
+      answer = 1;
+    } else if (random == 2) {
+      document.getElementById("fo_def_ques").innerHTML = fo2;
+      answer = 2;
+    } else if (random == 3) {
+      document.getElementById("fo_def_ques").innerHTML = fo3;
+      answer = 3;
+    } else if (random == 4) {
+      document.getElementById("fo_def_ques").innerHTML = fo4;
+      answer = 4;
+    } else if (random == 5) {
+      document.getElementById("fo_def_ques").innerHTML = fo5;
+      answer = 5;
+    } else if (random == 6) {
+      document.getElementById("fo_def_ques").innerHTML = fo6;
+      answer = 6;
+    } else if (random == 7) {
+      document.getElementById("fo_def_ques").innerHTML = fo7;
+      answer = 7;
+    } else if (random == 8) {
+      document.getElementById("fo_def_ques").innerHTML = fo8;
+      answer = 8;
+    } else if (random == 9) {
+      document.getElementById("fo_def_ques").innerHTML = fo9;
+      answer = 9;
+    } else if (random == 10) {
+      document.getElementById("fo_def_ques").innerHTML = fo10;
+      answer = 10;
+    }
+    let bg = document.getElementById("fo_def_input");
+    bg.oninput = function test_fo_def() {
+          let usr_input = document.getElementById("fo_def_input").value;
+          if (usr_input == answer) {
+              bg.style.backgroundColor = "#9ABC6B";
+              document.getElementById("another_3").style.display = "block";
+              document.getElementById("another_3").addEventListener("click", fo_def);
+            } else {
+              bg.style.backgroundColor = "#D6858E";
+            } //end of else
+        }; //end of test_fo_def function
+  }; //end of fo_def function
+
+
 
 //user selects give me a fire order number, i'll tell you the order
 function fo_num() {
@@ -318,77 +285,43 @@ function fo_num() {
   document.getElementById("wo_num_ques").style.display = "none";
   document.getElementById("fo_def_ques").style.display = "none";
   document.getElementById("fo_num_ques").style.display = "block";
-  document.getElementById("wo_mc").style.display = "none";
-  document.getElementById("wo_mc_num").style.display = "none";
-  document.getElementByd("fo_mc").style.display = "none";
-  document.getElementById("fo_mc_num").style.display = "none";
   document.getElementById("fo_num_input").value = "";
   document.getElementById("fo_num_input").style.backgroundColor = "#FFFFFF";
   document.getElementById("another_4").style.display = "none";
   let random = Math.floor(Math.random() * 10) + 1;
   let answer = "";
   let regex = "";
-  if (random == 1) {
-    regex = fo1_answer;
-  } else if (random == 2) {
-    regex = fo2_answer;
-  } else if (random == 3) {
-    regex = fo3_answer;
-  } else if (random == 4) {
-    regex = fo4_answer;
-  } else if (random == 5) {
-    regex = fo5_answer;
-  } else if (random == 6) {
-    regex = fo6_answer;
-  } else if (random == 7) {
-    regex = fo7_answer;
-  } else if (random == 8) {
-    regex = fo8_answer;
-  } else if (random == 9) {
-    regex = fo9_answer;
-  } else if (random == 10) {
-    regex = fo10_answer;
-  } //need to do RegExp matching here .match()
-  document.getElementById("fo_num_ques").innerHTML = ("What is Fire Order #" + random + "?");
-  let bg = document.getElementById("fo_num_input");
-  bg.oninput = function test_fo_num() { //FIX
-  let usr_input = document.getElementById("fo_num_input").value;
-    if (regex.test(usr_input)) {
-      bg.style.backgroundColor = "#9ABC6B";
-      document.getElementById("another_4").style.display = "block";
-      document.getElementById("another_4").addEventListener("click", fo_num);
-    } else {
-      bg.style.backgroundColor = "#D6858E";
-    } //end of else
-  }; //end of test_fo_num function
+    if (random == 1) {
+      regex = fo1_answer;
+    } else if (random == 2) {
+      regex = fo2_answer;
+    } else if (random == 3) {
+      regex = fo3_answer;
+    } else if (random == 4) {
+      regex = fo4_answer;
+    } else if (random == 5) {
+      regex = fo5_answer;
+    } else if (random == 6) {
+      regex = fo6_answer;
+    } else if (random == 7) {
+      regex = fo7_answer;
+    } else if (random == 8) {
+      regex = fo8_answer;
+    } else if (random == 9) {
+      regex = fo9_answer;
+    } else if (random == 10) {
+      regex = fo10_answer;
+    } //need to do RegExp matching here .match()
+    document.getElementById("fo_num_ques").innerHTML = ("What is Fire Order #" + random + "?");
+    let bg = document.getElementById("fo_num_input");
+    bg.oninput = function test_fo_num() { //FIX
+          let usr_input = document.getElementById("fo_num_input").value;
+          if (regex.test(usr_input)) {
+              bg.style.backgroundColor = "#9ABC6B";
+              document.getElementById("another_4").style.display = "block";
+              document.getElementById("another_4").addEventListener("click", fo_num);
+            } else {
+              bg.style.backgroundColor = "#D6858E";
+            } //end of else
+        }; //end of test_fo_num function
 }; //end of fo_num function
-/*
-function fo_mc() { //fire orders multiple choice
-  document.getElementById("wo_def_input").style.display = "none";
-  document.getElementById("wo_num_input").style.display = "none";
-  document.getElementById("fo_def_input").style.display = "none";
-  document.getElementById("fo_num_input").style.display = "none";
-  document.getElementById("wo_def_ques").style.display = "none";
-  document.getElementById("wo_num_ques").style.display = "none";
-  document.getElementById("fo_def_ques").style.display = "none";
-  document.getElementById("fo_num_ques").style.display = "none";
-  document.getElementById("wo_mc").style.display = "none";
-  document.getElementById("wo_mc_num").style.display = "none";
-  document.getElementByd("fo_mc").style.display = "block";
-  document.getElementById("fo_mc_num").style.display = "none";
-};
-function fo_mc_num() { //fire orders multiple choice by number
-  document.getElementById("wo_def_input").style.display = "none";
-  document.getElementById("wo_num_input").style.display = "none";
-  document.getElementById("fo_def_input").style.display = "none";
-  document.getElementById("fo_num_input").style.display = "none";
-  document.getElementById("wo_def_ques").style.display = "none";
-  document.getElementById("wo_num_ques").style.display = "none";
-  document.getElementById("fo_def_ques").style.display = "none";
-  document.getElementById("fo_num_ques").style.display = "none";
-  document.getElementById("wo_mc").style.display = "none";
-  document.getElementById("wo_mc_num").style.display = "none";
-  document.getElementByd("fo_mc").style.display = "none";
-  document.getElementById("fo_mc_num").style.display = "block";
-};
-*/
