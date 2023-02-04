@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*****************/
+/* BELOW 1344 pixels */
+/* 1344 / 16 = 84 */
+@media (max-width: 84em) {
+  main {
+    margin: 0 auto;
+  }
+  main div {
+    display: flex;
+    align-items: center;
+  }
+  header {
+    text-align: center;
+  }
+}
+/* BELOW 1200px (landscape tablets) */
+/* 1200 / 16 = 75 */
+@media (max-width: 75em) {
+  /* html {
+    /* font-size: 9px; 9/16 = 56.25% 
+    font-size: 14px; /* 16px = 1.6rem which is what size everything was on desktop 
+  } */
+  h2 {
+    font-size: 1.8em;
+  }
+  .grid {
+    row-gap: 1.6rem;
+    padding: 1.2rem 0;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 20%;
+  }
+  .btn,
+  .btn:link,
+  .btn:visited {
+    height: 8.2rem;
+    width: 8.2rem;
+    padding: 1em;
+    font-size: 1em;
+  }
+  .question-body {
+    font-size: 1.2em;
+  }
+  .input {
+    font-size: 1.2em;
+  }
+}
+/* BELOW 944px (tablets) */
+/* 944 / 16 = 59 */
+@media (max-width: 59em) {
+  h2 {
+    font-size: 1.6em;
+  }
+  .grid {
+    row-gap: 1.6rem;
+    padding: 1.2rem 0;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 10%;
+  }
+  .btn,
+  .btn:link,
+  .btn:visited {
+    height: 8.2rem;
+    width: 8.2rem;
+    padding: 1em;
+    font-size: 1em;
+  }
+  .question-body {
+    font-size: 1.2em;
+  }
+  .input {
+    font-size: 1.2em;
+  }
+}
+/* BELOW 704 px (small tablets) */
+/* 704 / 16 = 44 */
+@media (max-width: 44em) {
+  /* make a 4-column wide grid reduce to 2 rows of 2 on a smaller screen */
+  h2 {
+    font-size: 1.4em;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr !important;
+    /* padding: 1.2rem 0; */
+    /* justify-content: space-around; */
+  }
+  .btn,
+  .btn:link,
+  .btn:visited {
+    height: 6.4rem;
+    width: 15rem;
+    font-size: 1.2em;
+  }
+  #wo_num_input {
+    height: 180px;
+    width: 250px;
+  }
+  #fo_num_input {
+    height: 180px;
+    width: 250px;
+  }
+  .question-body {
+    font-size: 1em;
+  }
+}
+
+/* BELOW 544 px (phones) */
+/* 544 / 16 = 34 */
+@media (max-width: 34em) {
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+  h2 {
+    font-size: 1.4em;
+  }
+  .btn,
+  .btn:link,
+  .btn:visited {
+    height: 4rem !important;
+    width: 95%;
+    padding: 1.4em;
+    font-size: 1.2em;
+  }
+}

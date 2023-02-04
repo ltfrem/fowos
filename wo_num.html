@@ -1,71 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-178V08F8NJ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-       gtag('config', 'G-178V08F8NJ');
-    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit&display=swap"
+      rel="stylesheet"
+    />
     <title>Fire Orders & Watchout Situations Review</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="fowos.js"></script>
-    <meta charset="utf-8">
-    <meta name="description" content="Standard Fire Orders & Watchout Situations (10s & 18s) practice.">
-    <meta name="author" content="Laura Fremgen">
-    <meta name="keywords" content="firefighting, wildland fire, wildland firefighting, 10s and 18s, 10s and 18s practice, 10s & 18s, 10s & 18s practice, fire orders practice, watchout situations practice">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Standard Fire Orders & Watchout Situations (10s & 18s) practice."
+    />
+    <meta name="author" content="Laura Brownlee" />
+    <meta
+      name="keywords"
+      content="firefighting, wildland fire, wildland firefighting, 10s and 18s, 10s and 18s practice, 10s & 18s, 10s & 18s practice, fire orders practice, watchout situations practice"
+    />
+    <link rel="stylesheet" href="css/fowos2.css" />
+    <link rel="stylesheet" href="css/queries.css" />
   </head>
-  <body>
-    <header>Standard Firefighting Orders & Watchout Situations Review</header>
+  <body onload="wo_num()">
+    <header>
+      <h2>Standard Firefighting Orders & Watchout Situations Review</h2>
+    </header>
     <main>
-      <div id="divMain">
-          <h1>Watchout Situations</h1><br>
-          <h2>THIS IS WO_NUM.HTML</h2>
-          <input type="button" class="button" id="wo_def" value="Give me a Watchout, I'll tell you the number"></input>
-          <br><p id="wo_def_ques" class="question"></p>
-          <input type="text" id="wo_def_input" class="pop_input" size="4"></input><br>
-          <input type="button" id="another_1" value="Hit me again" class="again"><br></input>
-
-          <input type="button" class="button" id="wo_num" value="Give me a number, I'll tell you the Watchout"></input>
-          <br><p id="wo_num_ques" class="question"></p>
-          <textarea cols="28" rows="3" id="wo_num_input" class="pop_input"></textarea><br>
-          <input type="button" id="another_2" value="Hit me again" class="again"><br></input>
-
-          <input type="button" class="button" id="wo_mc" value="Watchout Situations Multiple Choice"></input>
-          <br><p id="wo_mc" class="mc"></p>
-          <input type="button" id="another_mc1" value="Hit me again" class="again"><br></input>
-
-          <input type="button" class="button" id="wo_mc_num" value="Watchout Situations Multiple Choice (Pick the Number)"></input>
-          <br><p id="wo_mc_num" class="mc"></p>
-          <input type="button" id="another_mc2" value="Hit me again" class="again"><br></input>
-
-          <h1>Standard Fire Orders</h1><br>
-          <input type="button" class="button" id="fo_def" value="Give me a Fire Order, I'll tell you the number"></input>
-          <br><p id="fo_def_ques" class="question"></p>
-          <input type="text" id="fo_def_input" class="pop_input" size="4"></input><br>
-          <input type="button" id="another_3" value="Hit me again" class="again"><br></input>
-
-          <input type="button" class="button" id="fo_num" value="Give me a number, I'll tell you the Fire Order"></input>
-          <br><p id="fo_num_ques" class="question"></p>
-          <textarea cols="28" rows="3" id="fo_num_input" class="pop_input"></textarea><br>
-          <input type="button" id="another_4" value="Hit me again" class="again"><br></input>
-
-          <input type="button" class="button" id="fo_mc" value="Fire Orders Multiple Choice"></input>
-          <br><p id="fo_mc" class="mc"></p>
-          <input type="button" id="another_mc3" value="Hit me again" class="again"><br></input>
-
-          <input type="button" class="button" id="fo_mc_num" value="Fire Orders Multiple Choice (Pick the Number)"></input>
-          <br><p id="fo_mc_num" class="mc"></p>
-          <input type="button" id="another_mc4" value="Hit me again" class="again"><br></input>
-<!--
-          <br><br><br><label for="comment">Comments:</label><br>
-          <textarea id="comment" cols="28" rows="8"></textarea><br>
-          <input type="submit" value="Submit" onclick="location.href='mailto:ltfrem@gmail.com';"> -->
-        <form>
+      <div class="question-body" id="body-main">
+        <p id="wo_num_ques"></p>
+        <textarea
+          rows="4"
+          class="input"
+          placeholder="Type the Watchout here"
+          id="wo_num_input"
+        ></textarea>
+        <button onclick="wo_num()" class="again" id="again" disabled>
+          Go again
+        </button>
+        <br />
+        <a href="index.html" id="return">Return to Main Menu</a>
       </div>
     </main>
+    <script src="fowos2.js"></script>
   </body>
-  </html>
+</html>
